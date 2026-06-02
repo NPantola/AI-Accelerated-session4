@@ -33,6 +33,49 @@ header {
   flex-wrap: wrap;
 }
 
+.auth-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.auth-status {
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.auth-status.logged-in {
+  background: rgba(232, 245, 233, 0.2);
+  border: 1px solid rgba(232, 245, 233, 0.5);
+}
+
+.auth-status.logged-out {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-button,
+.icon-button {
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.auth-button {
+  background: white;
+  color: #003d7a;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.auth-button:hover {
+  background: #e3f2fd;
+}
+
 .mascot {
   width: 80px;
   height: 80px;
@@ -153,7 +196,7 @@ section h3 {
   color: white;
   cursor: pointer;
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 6px 10px;
   transition: all 0.2s;
   border-radius: 4px;
   font-weight: bold;
@@ -190,6 +233,13 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 button[type="submit"] {
@@ -236,8 +286,71 @@ button[type="submit"]:hover {
   border: 1px solid #bee5eb;
 }
 
+.info-banner {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  background: #eef6ff;
+  border-left: 4px solid #0066cc;
+  border-radius: 6px;
+  color: #003d7a;
+}
+
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-dialog {
+  position: relative;
+  width: min(92vw, 420px);
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.modal-copy {
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.icon-button {
+  background: #f3f6fb;
+  color: #003d7a;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
 }
 
 footer {

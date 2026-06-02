@@ -1,0 +1,10 @@
+[
+  {
+    "username": "practice.lead",
+    "name": "Taylor Practice Lead",
+    "role": "practice_lead",
+    "practice_areas": ["Technology", "Strategy", "Operations"],
+    "salt": "e0f762fc6ed86dfb75ac870f8ebcbe98",
+    "password_hash": "491b5b895a830c86d6e63b774d905ad8faea68d35eaa75a3aa03bc2554183427"
+  }
+]
